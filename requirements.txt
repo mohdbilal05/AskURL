@@ -1,4 +1,7 @@
-# === Core LangChain & Integrations ===
+# === Streamlit Web App ===
+streamlit==1.39.0
+
+# === LangChain Ecosystem ===
 langchain==0.1.17
 langchain-community==0.0.37
 langchain-core==0.1.53
@@ -11,8 +14,8 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.2.2
-accelerate==0.29.3
+torch==2.2.1          # use a lighter stable build
+accelerate==0.28.0    # compatible with transformers
 
 # === Web Scraping ===
 unstructured==0.10.25
@@ -21,9 +24,11 @@ beautifulsoup4==4.12.3
 
 # === Utilities ===
 python-dotenv==1.0.1
-nltk==3.9.2
+nltk==3.9.1
+tqdm==4.66.4
+numpy==1.26.4
+pandas==2.2.2
 
-# === Optional but Recommended ===
-tqdm==4.66.4        # for progress bars (if needed)
-numpy==1.26.4       # dependency for sentence-transformers & torch
-pandas==2.2.2       # optional: for data inspection
+# === Compatibility Helpers ===
+pydantic==1.10.13
+typing-extensions==4.10.0
