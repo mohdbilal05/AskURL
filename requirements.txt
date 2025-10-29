@@ -1,0 +1,29 @@
+# === Core LangChain & Integrations ===
+langchain==0.1.17
+langchain-community==0.0.37
+langchain-core==0.1.53
+langchain-groq==0.1.0
+langchain-huggingface==0.0.3
+
+# === Vector Database ===
+chromadb==0.5.4
+
+# === Embeddings & Transformers ===
+sentence-transformers==2.6.1
+transformers==4.43.3
+torch==2.2.2
+accelerate==0.29.3
+
+# === Web Scraping ===
+unstructured==0.10.25
+requests==2.32.3
+beautifulsoup4==4.12.3
+
+# === Utilities ===
+python-dotenv==1.0.1
+nltk==3.9.2
+
+# === Optional but Recommended ===
+tqdm==4.66.4        # for progress bars (if needed)
+numpy==1.26.4       # dependency for sentence-transformers & torch
+pandas==2.2.2       # optional: for data inspection
