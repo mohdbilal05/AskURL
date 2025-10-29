@@ -14,8 +14,10 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.2.1          # use a lighter stable build
-accelerate==0.28.0    # compatible with transformers
+torch==2.5.1          # ✅ Compatible with Python 3.13
+accelerate==0.31.0    # ✅ Works with torch 2.5
+numpy==1.26.4
+pandas==2.2.2
 
 # === Web Scraping ===
 unstructured==0.10.25
@@ -26,8 +28,6 @@ beautifulsoup4==4.12.3
 python-dotenv==1.0.1
 nltk==3.9.1
 tqdm==4.66.4
-numpy==1.26.4
-pandas==2.2.2
 
 # === Compatibility Helpers ===
 pydantic==1.10.13
