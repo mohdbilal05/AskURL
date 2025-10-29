@@ -14,20 +14,20 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.5.1          # ✅ Compatible with Python 3.13
-accelerate==0.31.0    # ✅ Works with torch 2.5
-numpy==1.26.4
-pandas==2.2.2
+torch==2.5.1+cpu              # ✅ CPU-only build (fast + small)
+--extra-index-url https://download.pytorch.org/whl/cpu
+accelerate==0.31.0
 
-# === Web Scraping ===
-unstructured==0.10.25
-requests==2.32.3
+# === Web Scraping (simplified) ===
 beautifulsoup4==4.12.3
+requests==2.32.3
 
 # === Utilities ===
 python-dotenv==1.0.1
-nltk==3.9.1
 tqdm==4.66.4
+numpy==1.26.4
+pandas==2.2.2
+nltk==3.9.1
 
 # === Compatibility Helpers ===
 pydantic==1.10.13
