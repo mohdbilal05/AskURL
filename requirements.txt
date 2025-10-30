@@ -1,7 +1,7 @@
-# === Streamlit Web App ===
+# === Core Streamlit ===
 streamlit==1.39.0
 
-# === LangChain Ecosystem ===
+# === LangChain & Integrations ===
 langchain==0.1.17
 langchain-community==0.0.37
 langchain-core==0.1.53
@@ -14,21 +14,15 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.5.1+cpu              # ✅ CPU-only build (fast + small)
---extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
 accelerate==0.31.0
 
-# === Web Scraping (simplified) ===
+# === Web Scraping & Utilities ===
 beautifulsoup4==4.12.3
-requests==2.32.3
-
-# === Utilities ===
+requests>=2.31.0  # relaxed pin for Python 3.10+
 python-dotenv==1.0.1
 tqdm==4.66.4
+
+# === Data Handling ===
 numpy==1.26.4
 pandas==2.2.2
-nltk==3.9.1
-
-# === Compatibility Helpers ===
-pydantic==1.10.13
-typing-extensions==4.10.0
