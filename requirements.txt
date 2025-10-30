@@ -14,12 +14,12 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.5.1+cpu
+torch==2.5.1          # fixed: removed '+cpu'
 accelerate==0.31.0
 
 # === Web Scraping & Utilities ===
 beautifulsoup4==4.12.3
-requests>=2.31.0  # relaxed pin for Python 3.10+
+requests>=2.31.0
 python-dotenv==1.0.1
 tqdm==4.66.4
 
