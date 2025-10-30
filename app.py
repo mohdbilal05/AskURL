@@ -86,4 +86,4 @@ if submit:
             st.error(f"⚠️ {e}")
 
 st.divider()
-st.caption("💡 Built with LangChain, Groq, and HuggingFace — © Real Estate Assistant 2025")
+st.caption("💡 Built with LangChain, Groq, and HuggingFace — © AskURL 2025")
