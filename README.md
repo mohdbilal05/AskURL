@@ -1,86 +1,100 @@
-# 🧠 AskURL — Chat with Any Website using AI
-
-[![Streamlit App](https://img.shields.io/badge/Live%20App-Streamlit-brightgreen?logo=streamlit)](https://askurl-ai.streamlit.app/)
-[![GitHub](https://img.shields.io/badge/View%20Code-GitHub-black?logo=github)](https://github.com/mohdbilal05/AskURL)
-[![Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python)](https://www.python.org/)
-[![LangChain](https://img.shields.io/badge/Framework-LangChain-orange?logo=chainlink)]
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)]()
+# 🔍 AskURL  
+### A Web App / LLM-Powered Agent by [Mohd Bilal](https://www.linkedin.com/in/bilal-mohd)  
 
 ---
 
-## 🚀 Overview
-
-**AskURL** is an end-to-end **Retrieval-Augmented Generation (RAG)** web app that lets you **chat with any website**.  
-Just enter a URL — the app reads, processes, and extracts information, then uses an **LLM** to answer your questions contextually.  
-
-🔗 **Live App:** [https://askurl-ai.streamlit.app/](https://askurl-ai.streamlit.app/)  
-💻 **GitHub Repo:** [https://github.com/mohdbilal05/AskURL](https://github.com/mohdbilal05/AskURL)
+## 🚀 Project Overview  
+In the age of massive online content, allowing users to ask questions about URL-linked content opens powerful possibilities.  
+This project implements a service for users to provide a **URL**, then the system fetches the content, and a language model (LLM) answers questions about it — combining retrieval + generation (RAG) workflow.  
+It covers the full lifecycle: ingesting URL content, processing & indexing, building a RAG module, and serving an interactive interface via an app.
 
 ---
 
-## 💡 Key Features
-
-✅ Chat with any webpage in real-time  
-✅ Dynamic web scraping and text cleaning  
-✅ Vector-based document retrieval using **ChromaDB**  
-✅ Contextual query answering via **LangChain + Groq LLMs**  
-✅ Fully deployed on **Streamlit Cloud**  
-✅ Modular and scalable architecture for GenAI workflows  
+## 🧩 What This Project Demonstrates  
+✅ End-to-end RAG (retrieval-augmented generation) pipeline  
+✅ URL content fetching & preprocessing (HTML/text extraction)  
+✅ Embedding generation, vector indexing, retrieval logic  
+✅ LLM integration to answer questions over custom content  
+✅ Web application interface (app.py) ready for demo/deployment  
 
 ---
 
-## ⚙️ Tech Stack
-
-| Category | Tools & Frameworks |
-|-----------|--------------------|
-| **Frontend & Deployment** | Streamlit Cloud |
-| **LLM Framework** | LangChain, LangChain-Groq, LangChain-HuggingFace |
-| **Vector Database** | ChromaDB |
-| **Embeddings & NLP** | Sentence-Transformers, Transformers, NLTK |
-| **Model Acceleration** | Torch, Accelerate |
-| **Utilities** | BeautifulSoup4, Python-dotenv, Pandas, NumPy, TQDM |
-
----
-
-## 🧩 System Workflow
-
-1. **URL Input:** User provides any valid webpage URL.  
-2. **Content Extraction:** The app scrapes and preprocesses text using BeautifulSoup.  
-3. **Chunking & Embedding:** Sentences are converted into vector embeddings.  
-4. **Vector Storage:** Embeddings are stored in **ChromaDB** for retrieval.  
-5. **Context Retrieval:** LangChain retrieves relevant chunks for each query.  
-6. **Response Generation:** Groq LLM produces contextual answers.  
-7. **Display:** Streamlit UI displays the response in a conversational format.  
-
----
-
-## 🧠 Project Structure
-
-<img width="562" height="271" alt="image" src="https://github.com/user-attachments/assets/91bef67a-8a3a-407f-81f4-e254a9c5ba97" />
-
+## 📁 Repository Structure  
+<img width="581" height="242" alt="image" src="https://github.com/user-attachments/assets/ec9bd05b-a895-476a-8421-20a2bad15523" />
 
 
 ---
 
-## 🧰 Installation & Setup (Local)
+## 🧠 Technical Workflow  
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/mohdbilal05/AskURL.git
-cd AskURL
+### 1️⃣ URL Content Ingestion  
+- Users submit a URL.  
+- Fetch and parse the web page content (HTML → text).  
+- Clean and preprocess: remove boilerplate, extract main content, tokenize.  
 
-# 2. Create a virtual environment
-python -m venv venv
-source venv/bin/activate      # for macOS/Linux
-venv\Scripts\activate         # for Windows
+### 2️⃣ Embedding & Indexing  
+- Generate embeddings for chunks of extracted text.  
+- Store them in vector index (Faiss / Pinecone / etc).  
+- Setup retrieval mechanism: given a user query, find relevant chunks.  
 
-# 3. Install dependencies
-pip install -r requirements.txt
+### 3️⃣ Question Answering via LLM  
+- Retrieve top-k relevant chunks.  
+- Construct prompt combining retrieved text + user question.  
+- Pass to LLM backend (OpenAI / local) to generate answer.  
+- Return to user via web interface.  
 
-# 4. Add your environment variables
-# Create a .env file and add:
-# GROQ_API_KEY=your_groq_api_key
+### 4️⃣ Web App Interface  
+- `app.py` implements HTTP endpoints for URL submission, question input, response display.  
+- Clean UI, error handling, session handling.  
 
-# 5. Run the app
-streamlit run app.py
+---
+
+## 💡 Key Achievements  
+- Built a **custom RAG solution** tailored to user-provided URLs instead of fixed corpora.  
+- Demonstrated full stack ability: backend + retrieval layer + LLM integration + frontend.  
+- Made the system modular (separate `rag.py` logic) and ready for extension.  
+- Positioned the project as a showcase of modern AI + application development.  
+
+---
+
+## 🔬 Tech Stack  
+| Category        | Tools & Technologies                           |
+|-----------------|------------------------------------------------|
+| Programming     | Python 3                                       |
+| Web Framework   | Flask / FastAPI (via `app.py`)                |
+| Retrieval       | Embeddings + vector index (Faiss / Pinecone)  |
+| LLM Integration | OpenAI GPT-3/4 or equivalent                   |
+| Data Processing | BeautifulSoup / requests / HTML parsing       |
+| Optional Frontend | HTML/CSS/JS for UI                           |
+
+---
+
+## 🧾 Business Relevance  
+This project addresses the practical business challenge of turning **arbitrary web content** (via URL) into **interactive Q&A insight** — valuable for knowledge-management, research assistants, customer support, and internal dashboards.  
+It shows how advanced ML/AI workflows (RAG) can be built and delivered as usable products.
+
+---
+
+## 🔮 Future Enhancements  
+🔹 Support **multiple URLs** in one session (multi-document context)  
+🔹 Add **file uploads** (PDFs, DOCX) in addition to URLs  
+🔹 Improve UI/UX: live chat interface, session history, context tracking  
+🔹 Add **responsiveness and scalability**: containerize app, deploy on cloud  
+🔹 Add analytics: track questions, performance, retrieval accuracy, user feedback  
+
+---
+
+## 👨‍💻 About the Author  
+**Mohd Bilal**  
+Data Science & Machine Learning Engineer | Building practical AI systems and full-stack solutions  
+📍 Passionate about bridging advanced AI workflows (LLMs, RAG) with web applications and real-world business value
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/bilal-mohd)  
+- 🌐 [GitHub](https://github.com/mohdbilal05)  
+- ✉️ Email: mohdbilal3109@gmail.com  
+
+---
+
+### ⭐ If you find this project interesting, please star ⭐ the repository — your support helps me continue building and sharing!
+
 
