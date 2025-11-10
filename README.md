@@ -34,18 +34,18 @@ It covers the full lifecycle: ingesting URL content, processing & indexing, buil
 
 ### 2️⃣ Embedding & Indexing  
 - Generate embeddings for chunks of extracted text.  
-- Store them in vector index (Faiss / Pinecone / etc).  
+- Store them in a vector index (Faiss / Pinecone / etc).  
 - Setup retrieval mechanism: given a user query, find relevant chunks.  
 
 ### 3️⃣ Question Answering via LLM  
 - Retrieve top-k relevant chunks.  
-- Construct prompt combining retrieved text + user question.  
-- Pass to LLM backend (OpenAI / local) to generate answer.  
-- Return to user via web interface.  
+- Construct a prompt combining the retrieved text + user question.  
+- Pass to LLM backend (OpenAI / local / Groq) to generate an answer.  
+- Return to the user via web interface.  
 
 ### 4️⃣ Web App Interface  
-- `app.py` implements HTTP endpoints for URL submission, question input, response display.  
-- Clean UI, error handling, session handling.  
+- `app.py` implements HTTP endpoints for URL submission, question input, and response display.  
+- Clean UI, error handling, and session handling.  
 
 ---
 
@@ -62,10 +62,10 @@ It covers the full lifecycle: ingesting URL content, processing & indexing, buil
 |-----------------|------------------------------------------------|
 | Programming     | Python 3                                       |
 | Web Framework   | Flask / FastAPI (via `app.py`)                |
-| Retrieval       | Embeddings + vector index (Faiss / Pinecone)  |
+| Retrieval       | Embeddings + vector index (Huggingface)  |
 | LLM Integration | OpenAI GPT-3/4 or equivalent                   |
 | Data Processing | BeautifulSoup / requests / HTML parsing       |
-| Optional Frontend | HTML/CSS/JS for UI                           |
+| Optional Frontend | Streamlit                           |
 
 ---
 
