@@ -80,7 +80,7 @@ It shows how advanced ML/AI workflows (RAG) can be built and delivered as usable
 🔹 Add **file uploads** (PDFs, DOCX) in addition to URLs  
 🔹 Improve UI/UX: live chat interface, session history, context tracking  
 🔹 Add **responsiveness and scalability**: containerize app, deploy on cloud  
-🔹 Add analytics: track questions, performance, retrieval accuracy, user feedback  
+🔹 Add analytics: track questions, performance, retrieval accuracy, and user feedback  
 
 ---
 
@@ -90,7 +90,8 @@ Data Science & Machine Learning Engineer | Building practical AI systems and ful
 📍 Passionate about bridging advanced AI workflows (LLMs, RAG) with web applications and real-world business value
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/bilal-mohd)  
-- 🌐 [GitHub](https://github.com/mohdbilal05)  
+- 🌐 [GitHub](https://github.com/mohdbilal05)
+- 🚀 Live Demo: [askurl-ai.streamlit.app](https://askurl-ai.streamlit.app/) 
 - ✉️ Email: mohdbilal3109@gmail.com  
 
 ---
