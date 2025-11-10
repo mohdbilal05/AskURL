@@ -61,7 +61,6 @@ It covers the full lifecycle: ingesting URL content, processing & indexing, buil
 | Category        | Tools & Technologies                           |
 |-----------------|------------------------------------------------|
 | Programming     | Python 3                                       |
-| Web Framework   | Flask / FastAPI (via `app.py`)                |
 | Retrieval       | Embeddings + vector index (Huggingface)  |
 | LLM Integration | OpenAI GPT-3/4 or equivalent                   |
 | Data Processing | BeautifulSoup / requests / HTML parsing       |
