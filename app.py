@@ -58,7 +58,7 @@ if process_url_button:
 st.divider()
 
 # === Query Section ===
-query = st.text_input("💬 Ask a Question", placeholder="e.g., What was the 30-year fixed mortgage rate and its date?")
+query = st.text_input("💬 Ask a Question", placeholder="e.g., Ask any question related to the processed URL")
 submit = st.button("🚀 Submit Question")
 
 if submit:
