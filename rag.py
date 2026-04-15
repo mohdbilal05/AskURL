@@ -8,8 +8,7 @@ from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-#from langchain_groq import ChatGroq
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
@@ -51,7 +50,7 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 VECTORSTORE_DIR = Path(__file__).parent / "resources/vectorstore"
 
 # Logical collection name inside the Chroma database
-COLLECTION_NAME = "real_estate"
+COLLECTION_NAME = "knowledge_base"
 
 # Global placeholders for model and vector store (to initialize once)
 llm = None
@@ -60,18 +59,19 @@ vector_store = None
 # =========================================================
 # === COMPONENT INITIALIZATION ===
 # =========================================================
+
 def initialize_components():
     """
-    Initialize Google Gemini LLM and Chroma vector store.
+    Initialize Groq LLM and Chroma vector store.
     Ensures we only load models once (singleton pattern).
     """
     global llm, vector_store
 
     # --- Initialize LLM (Groq) ---
     if llm is None:
-        print("🔹 Initializing Gemini model...")
-        llm = ChatGoogleGenerativeAI(
-            model="gemini-3-flash-preview",          # Model name from Groq
+        print("🔹 Initializing Groq model...")
+        llm = ChatGroq(
+            model="llama-3.1-8b-instant",          # Model name from Groq
             temperature=0.3,                  # Low temperature = factual answers
             max_tokens=512                    # Limit response length
         )

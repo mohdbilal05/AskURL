@@ -7,7 +7,7 @@ langchain-huggingface==0.0.3
 chromadb==0.5.4
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch
+torch --index-url https://download.pytorch.org/whl/cpu
 accelerate==0.31.0
 beautifulsoup4==4.12.3
 requests>=2.31.0
