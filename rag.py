@@ -8,7 +8,8 @@ from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_groq import ChatGroq
+#from langchain_groq import ChatGroq
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 
@@ -69,7 +70,7 @@ def initialize_components():
     # --- Initialize LLM (Groq) ---
     if llm is None:
         print("🔹 Initializing Groq model...")
-        llm = ChatGroq(
+        llm = ChatGoogleGenerativeAI(
             model="gemini-3-flash-preview",          # Model name from Groq
             temperature=0.3,                  # Low temperature = factual answers
             max_tokens=512                    # Limit response length
