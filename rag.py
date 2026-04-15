@@ -62,14 +62,14 @@ vector_store = None
 # =========================================================
 def initialize_components():
     """
-    Initialize Groq LLM and Chroma vector store.
+    Initialize Google Gemini LLM and Chroma vector store.
     Ensures we only load models once (singleton pattern).
     """
     global llm, vector_store
 
     # --- Initialize LLM (Groq) ---
     if llm is None:
-        print("🔹 Initializing Groq model...")
+        print("🔹 Initializing Gemini model...")
         llm = ChatGoogleGenerativeAI(
             model="gemini-3-flash-preview",          # Model name from Groq
             temperature=0.3,                  # Low temperature = factual answers
