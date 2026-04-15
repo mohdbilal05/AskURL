@@ -70,7 +70,7 @@ def initialize_components():
     if llm is None:
         print("🔹 Initializing Groq model...")
         llm = ChatGroq(
-            model="mixtral-8x7b-32768",  # Model name from Groq
+            model="llama3-70b-8192",          # Model name from Groq
             temperature=0.3,                  # Low temperature = factual answers
             max_tokens=512                    # Limit response length
         )
@@ -111,8 +111,6 @@ def process_urls(urls):
         web_paths=urls,
         requests_kwargs={"headers": {"User-Agent": "Mozilla/5.0"}}
     )
-
-    raw_data = loader.load()
 
     # ✅ Convert to Document objects
     raw_data = loader.load()
@@ -194,7 +192,7 @@ if __name__ == "__main__":
         print(step)
 
     # Example query to test retrieval accuracy
-    query = "What was the 30-year fixed mortgage rate and its date?"
+    query = "Ask questions based on the processed URL's"
     answer, sources = generate_answer(query)
 
     # Nicely formatted console output
