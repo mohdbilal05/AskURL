@@ -2,10 +2,10 @@
 streamlit==1.39.0
 
 # === LangChain & Integrations ===
-langchain==0.1.17
-langchain-community==0.0.37
-langchain-core==0.1.53
-langchain-groq==0.1.0
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+langchain-google-genai==2.0.1  # CRITICAL: Added for Gemini support
 langchain-huggingface==0.0.3
 
 # === Vector Database ===
@@ -14,7 +14,7 @@ chromadb==0.5.4
 # === Embeddings & Transformers ===
 sentence-transformers==2.6.1
 transformers==4.43.3
-torch==2.5.1          # fixed: removed '+cpu'
+torch==2.5.1
 accelerate==0.31.0
 
 # === Web Scraping & Utilities ===
