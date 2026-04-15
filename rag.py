@@ -70,7 +70,7 @@ def initialize_components():
     if llm is None:
         print("🔹 Initializing Groq model...")
         llm = ChatGroq(
-            model="llama3-70b-8192",          # Model name from Groq
+            model="llama-3.3-70b-versatile",          # Model name from Groq
             temperature=0.3,                  # Low temperature = factual answers
             max_tokens=512                    # Limit response length
         )
