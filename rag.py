@@ -159,8 +159,10 @@ def process_urls(urls):
 # =========================================================
 def generate_answer(query):
     """
-    Retrieve relevant text chunks from vector DB,
-    pass them to the LLM, and generate a contextual answer.
+    Please act as an AI assistant that first retrieves the most relevant text chunks from a vector database based on a user’s query or topic.
+    Then, use those retrieved text segments as context to generate a clear, accurate, and well-informed answer.
+    Make sure the final response integrates the information from the text chunks smoothly, providing a coherent and contextually appropriate explanation or solution.
+    Keep the tone natural and professional, and ensure the answer directly addresses the user’s question with relevant details drawn from the retrieved content.
     """
     if not vector_store:
         raise RuntimeError("Vector database is not initialized")
